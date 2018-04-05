@@ -1,0 +1,62 @@
+unit uMonitoringCommonVariable;
+
+interface
+
+uses
+  SysUtils, Classes;
+
+const
+  //StateImageList
+  NothingStateIndex = -1;
+  DoorOpenModeStateIndex = -1;
+  DoorPosiManageStateIndex = 0;
+  DoorNegaManageStateIndex = 1;
+  DoorCloseModeStateIndex = 2;
+  DoorFullLockStateIndex = 3;  //락잠금
+  NormalEventStateIndex = 4;
+  AlarmEventStateIndex = 5;
+
+  //NetworkImageList
+  ServerConnectImageIndex = 0;
+  ServerDisConnectImageIndex = 1;
+  NodeConnectImageIndex = 2;
+  NodeFaultConnectImageIndex  = 3;
+  NodeDisConnectImageIndex = 4;
+  DeviceConnectImageIndex = 5;
+  DeviceDisConnectImageIndex = 6;
+
+  //DoorImageList
+  DoorCloseStateImageIndex = 0;
+  DoorOpenStateImageIndex = 1;
+  DoorNothingStateImageIndex = 2;
+  DoorLongTimeStateImageIndex = 3;
+  DoorFireStateImageIndex = 4;
+
+  //AlarmImageList
+  AlarmNothingStateImageIndex = 0;
+  DisAlarmModeStateImageIndex = 1;
+  AlarmModeStateImageIndex = 2;
+  AlarmEventStateImageIndex = 3;
+  AlarmFireStateImageIndex = 4;
+  AlarmTestStateImageIndex = 5;
+  AlarmInitStateImageIndex = 6;
+  AlarmPatrolStateImageIndex = 7;
+
+type
+  TdmMonitoringCommonVariable = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmMonitoringCommonVariable: TdmMonitoringCommonVariable;
+  AlarmEventViewStatusCode : TStringList;  //알람 발생 코드
+  AlarmEventSoundStatusCode : TStringList;  //소리 발생 코드
+
+implementation
+
+{$R *.dfm}
+
+end.

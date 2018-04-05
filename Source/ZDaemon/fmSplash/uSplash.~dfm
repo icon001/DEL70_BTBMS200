@@ -1,0 +1,39 @@
+object fmSplash: TfmSplash
+  Left = 245
+  Top = 426
+  Width = 870
+  Height = 144
+  BorderIcons = []
+  Caption = 'fmSplash'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 0
+    Top = 24
+    Width = 849
+    Height = 64
+    AutoSize = False
+    Caption = ' '#54532#47196#44536#47016#51012' '#47196#46377#51473#51077#45768#45796'.'
+    Font.Charset = HANGEUL_CHARSET
+    Font.Color = clBlue
+    Font.Height = -64
+    Font.Name = #44404#47548#52404
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object SplashTimer: TTimer
+    Interval = 500
+    OnTimer = SplashTimerTimer
+    Left = 96
+    Top = 40
+  end
+end
